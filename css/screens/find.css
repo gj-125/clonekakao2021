@@ -29,7 +29,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .open-post__title {
@@ -87,4 +87,24 @@
 }
 .open-post__heart span {
   margin-left: 3px;
+}
+
+@keyframes heartbeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.1);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart:hover i {
+  will-change: transform;
+  animation: heartbeat 1s linear infinite;
 }
